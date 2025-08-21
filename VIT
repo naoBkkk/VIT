@@ -713,7 +713,7 @@ G2L["45"]["BackgroundTransparency"] = 1;
 G2L["45"]["Size"] = UDim2.new(0, 200, 0, 14);
 G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["45"]["Text"] = [[V immortal team revival gui, rblx terminated my previous one]];
-G2L["45"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["45"]["Position"] = UDim2.new(0.29752, 0, 0.08333, 0);
 
 
 -- StarterGui.LoginGui.LoginFrame
@@ -1291,35 +1291,37 @@ task.spawn(C_20);
 -- StarterGui.LoginGui.MainFrame.TextLabel.LocalScript
 local function C_22()
 local script = G2L["22"];
-	-- LocalScript inside any GUI object (Frame, ImageLabel, etc.)
+	-- LocalScript inside a TextLabel
 	
-	local parentGUI = script.Parent
+	local textLabel = script.Parent
 	local RunService = game:GetService("RunService")
 	
-	-- Table to store all strokes
-	local strokes = {}
-	
-	-- Function to recursively find all UIStrokes in parentGUI and its descendants
-	local function findStrokes(obj)
-		if obj:IsA("UIStroke") then
-			table.insert(strokes, obj)
-		end
-		for _, child in pairs(obj:GetChildren()) do
-			findStrokes(child)
-		end
+	-- Ensure UIGradient exists
+	local gradient = textLabel:FindFirstChildOfClass("UIGradient")
+	if not gradient then
+		gradient = Instance.new("UIGradient")
+		gradient.Parent = textLabel
 	end
 	
-	-- Run the search
-	findStrokes(parentGUI)
+	gradient.Rotation = 0
 	
-	-- Rainbow cycling
+	-- Function to generate rainbow
+	local function rainbowColors(hueShift)
+		return ColorSequence.new{
+			ColorSequenceKeypoint.new(0, Color3.fromHSV((0/6 + hueShift) % 1, 1, 1)),
+			ColorSequenceKeypoint.new(0.2, Color3.fromHSV((1/6 + hueShift) % 1, 1, 1)),
+			ColorSequenceKeypoint.new(0.4, Color3.fromHSV((2/6 + hueShift) % 1, 1, 1)),
+			ColorSequenceKeypoint.new(0.6, Color3.fromHSV((3/6 + hueShift) % 1, 1, 1)),
+			ColorSequenceKeypoint.new(0.8, Color3.fromHSV((4/6 + hueShift) % 1, 1, 1)),
+			ColorSequenceKeypoint.new(1, Color3.fromHSV((5/6 + hueShift) % 1, 1, 1)),
+		}
+	end
+	
+	-- Animate (fast + perfect loop)
 	local hue = 0
 	RunService.RenderStepped:Connect(function(delta)
-		hue = (hue + delta * 0.2) % 1 -- adjust speed here
-		local color = Color3.fromHSV(hue, 1, 1)
-		for _, stroke in pairs(strokes) do
-			stroke.Color = color
-		end
+		hue = (hue + delta * 1) % 1 -- "1" makes it fast, adjust higher for faster
+		gradient.Color = rainbowColors(hue)
 	end)
 	
 end;
