@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 76 | Scripts: 27 | Modules: 0 | Tags: 0
+-- Instances: 77 | Scripts: 27 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.LoginGui
@@ -702,96 +702,110 @@ G2L["44"] = Instance.new("LocalScript", G2L["43"]);
 
 
 
--- StarterGui.LoginGui.LoginFrame
-G2L["45"] = Instance.new("Frame", G2L["1"]);
+-- StarterGui.LoginGui.MainFrame.TextLabel
+G2L["45"] = Instance.new("TextLabel", G2L["2"]);
 G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Size"] = UDim2.new(0, 358, 0, 448);
-G2L["45"]["Position"] = UDim2.new(0.34675, 0, -0.2891, 0);
+G2L["45"]["TextSize"] = 16;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["BackgroundTransparency"] = 1;
+G2L["45"]["Size"] = UDim2.new(0, 200, 0, 14);
 G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Name"] = [[LoginFrame]];
+G2L["45"]["Text"] = [[V immortal team revival gui, rblx terminated my previous one]];
+G2L["45"]["Position"] = UDim2.new(0, 0, 1, 0);
+
+
+-- StarterGui.LoginGui.LoginFrame
+G2L["46"] = Instance.new("Frame", G2L["1"]);
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Size"] = UDim2.new(0, 358, 0, 448);
+G2L["46"]["Position"] = UDim2.new(0.34675, 0, -0.2891, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Name"] = [[LoginFrame]];
 
 
 -- StarterGui.LoginGui.LoginFrame.LocalScript
-G2L["46"] = Instance.new("LocalScript", G2L["45"]);
+G2L["47"] = Instance.new("LocalScript", G2L["46"]);
 
 
 
 -- StarterGui.LoginGui.LoginFrame.LocalScript
-G2L["47"] = Instance.new("LocalScript", G2L["45"]);
+G2L["48"] = Instance.new("LocalScript", G2L["46"]);
 
 
 
 -- StarterGui.LoginGui.LoginFrame.PasswordBox
-G2L["48"] = Instance.new("TextBox", G2L["45"]);
-G2L["48"]["Name"] = [[PasswordBox]];
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["TextWrapped"] = true;
-G2L["48"]["TextTruncate"] = Enum.TextTruncate.SplitWord;
-G2L["48"]["TextSize"] = 27;
-G2L["48"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["48"]["PlaceholderText"] = [[Password]];
-G2L["48"]["Size"] = UDim2.new(0, 226, 0, 32);
-G2L["48"]["Position"] = UDim2.new(0.18182, 0, 0.36607, 0);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Text"] = [[]];
-G2L["48"]["BackgroundTransparency"] = 0.15;
-
-
--- StarterGui.LoginGui.LoginFrame.UsernameBox
-G2L["49"] = Instance.new("TextBox", G2L["45"]);
-G2L["49"]["Name"] = [[UsernameBox]];
+G2L["49"] = Instance.new("TextBox", G2L["46"]);
+G2L["49"]["Name"] = [[PasswordBox]];
 G2L["49"]["BorderSizePixel"] = 0;
 G2L["49"]["TextWrapped"] = true;
+G2L["49"]["TextTruncate"] = Enum.TextTruncate.SplitWord;
 G2L["49"]["TextSize"] = 27;
 G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["49"]["PlaceholderText"] = [[Login]];
+G2L["49"]["PlaceholderText"] = [[Password]];
 G2L["49"]["Size"] = UDim2.new(0, 226, 0, 32);
-G2L["49"]["Position"] = UDim2.new(0.18182, 0, 0.22768, 0);
+G2L["49"]["Position"] = UDim2.new(0.18182, 0, 0.36607, 0);
 G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["49"]["Text"] = [[]];
 G2L["49"]["BackgroundTransparency"] = 0.15;
 
 
--- StarterGui.LoginGui.LoginFrame.LoginButton
-G2L["4a"] = Instance.new("TextButton", G2L["45"]);
+-- StarterGui.LoginGui.LoginFrame.UsernameBox
+G2L["4a"] = Instance.new("TextBox", G2L["46"]);
+G2L["4a"]["Name"] = [[UsernameBox]];
 G2L["4a"]["BorderSizePixel"] = 0;
-G2L["4a"]["TextSize"] = 32;
+G2L["4a"]["TextWrapped"] = true;
+G2L["4a"]["TextSize"] = 27;
 G2L["4a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 248, 252);
-G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Michroma.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["4a"]["Size"] = UDim2.new(0, 91, 0, 35);
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["PlaceholderText"] = [[Login]];
+G2L["4a"]["Size"] = UDim2.new(0, 226, 0, 32);
+G2L["4a"]["Position"] = UDim2.new(0.18182, 0, 0.22768, 0);
 G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["Text"] = [[Login]];
-G2L["4a"]["Name"] = [[LoginButton]];
-G2L["4a"]["Position"] = UDim2.new(0.36872, 0, 0.61384, 0);
+G2L["4a"]["Text"] = [[]];
+G2L["4a"]["BackgroundTransparency"] = 0.15;
+
+
+-- StarterGui.LoginGui.LoginFrame.LoginButton
+G2L["4b"] = Instance.new("TextButton", G2L["46"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["TextSize"] = 32;
+G2L["4b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 248, 252);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Michroma.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4b"]["Size"] = UDim2.new(0, 91, 0, 35);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Text"] = [[Login]];
+G2L["4b"]["Name"] = [[LoginButton]];
+G2L["4b"]["Position"] = UDim2.new(0.36872, 0, 0.61384, 0);
 
 
 -- StarterGui.LoginGui.LoginFrame.LoginButton.UIGradient
-G2L["4b"] = Instance.new("UIGradient", G2L["4a"]);
-G2L["4b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(18, 22, 255)),ColorSequenceKeypoint.new(0.540, Color3.fromRGB(181, 76, 255)),ColorSequenceKeypoint.new(0.943, Color3.fromRGB(255, 0, 5)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 0, 5))};
+G2L["4c"] = Instance.new("UIGradient", G2L["4b"]);
+G2L["4c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(18, 22, 255)),ColorSequenceKeypoint.new(0.540, Color3.fromRGB(181, 76, 255)),ColorSequenceKeypoint.new(0.943, Color3.fromRGB(255, 0, 5)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 0, 5))};
 
 
 -- StarterGui.LoginGui.LoginFrame.StatusLabel
-G2L["4c"] = Instance.new("TextLabel", G2L["45"]);
-G2L["4c"]["TextStrokeTransparency"] = 0;
-G2L["4c"]["BorderSizePixel"] = 0;
-G2L["4c"]["TextSize"] = 35;
-G2L["4c"]["TextTransparency"] = 0.53;
-G2L["4c"]["TextStrokeColor3"] = Color3.fromRGB(69, 101, 48);
-G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["BackgroundTransparency"] = 1;
-G2L["4c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["Text"] = [[]];
-G2L["4c"]["Name"] = [[StatusLabel]];
-G2L["4c"]["Position"] = UDim2.new(0.22067, 0, 0.46875, 0);
+G2L["4d"] = Instance.new("TextLabel", G2L["46"]);
+G2L["4d"]["TextStrokeTransparency"] = 0;
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["TextSize"] = 35;
+G2L["4d"]["TextTransparency"] = 0.53;
+G2L["4d"]["TextStrokeColor3"] = Color3.fromRGB(69, 101, 48);
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Text"] = [[]];
+G2L["4d"]["Name"] = [[StatusLabel]];
+G2L["4d"]["Position"] = UDim2.new(0.22067, 0, 0.46875, 0);
 
 
 -- StarterGui.LoginGui.MainFrame.LocalScript
@@ -1692,8 +1706,8 @@ local script = G2L["44"];
 end;
 task.spawn(C_44);
 -- StarterGui.LoginGui.LoginFrame.LocalScript
-local function C_46()
-local script = G2L["46"];
+local function C_47()
+local script = G2L["47"];
 	--// LocalScript inside your LoginFrame
 	
 	local TweenService = game:GetService("TweenService")
@@ -1889,10 +1903,10 @@ local script = G2L["46"];
 	end)
 	
 end;
-task.spawn(C_46);
+task.spawn(C_47);
 -- StarterGui.LoginGui.LoginFrame.LocalScript
-local function C_47()
-local script = G2L["47"];
+local function C_48()
+local script = G2L["48"];
 	local frame = script.Parent
 	local dragging = false
 	local dragStart = nil
@@ -1924,6 +1938,6 @@ local script = G2L["47"];
 	end)
 	
 end;
-task.spawn(C_47);
+task.spawn(C_48);
 
 return G2L["1"], require;
